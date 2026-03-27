@@ -13,7 +13,7 @@ export default function Navbar() {
         <Link href="#tecnologia" className={styles.navLink}>Tecnologia</Link>
         <Link href="#roi" className={styles.navLink}>Gestão & ROI</Link>
         <Link href="#seguranca" className={styles.navLink}>Segurança NR-12</Link>
-        <button className={styles.ctaButton}>Agendar Demo</button>
+        <Link href="#demo" className={styles.ctaButton}>Agendar Demo</Link>
       </div>
     </nav>
   );

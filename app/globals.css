@@ -32,6 +32,10 @@
   --transition-slow: 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
 }

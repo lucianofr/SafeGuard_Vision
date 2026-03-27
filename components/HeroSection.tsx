@@ -48,8 +48,8 @@ export default function HeroSection() {
         </p>
         
         <div className={styles.ctaGroup}>
-          <button className={styles.primaryBtn}>Agendar Demonstração</button>
-          <button className={styles.secondaryBtn}>Ver Arquitetura</button>
+          <a href="#demo" className={styles.primaryBtn}>Agendar Demonstração</a>
+          <a href="#tecnologia" className={styles.secondaryBtn}>Ver Arquitetura</a>
         </div>
       </div>
 

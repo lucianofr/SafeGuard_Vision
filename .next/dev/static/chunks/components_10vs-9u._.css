@@ -260,7 +260,7 @@
   width: 45%;
   height: 65vh;
   animation: HeroSection-module__SEewqa__heroFadeIn var(--transition-slow) forwards;
-  background: #05080a;
+  background: #05080a url("/hero-worker.png") center / cover no-repeat;
   border: 1px solid #ffffff26;
   border-radius: 12px;
   animation-delay: .8s;

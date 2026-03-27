@@ -54,6 +54,7 @@ export default function HeroSection() {
       </div>
 
       <div className={styles.cameraMockup}>
+        <div className={styles.scanline} />
         <div className={styles.dangerZone} />
         <div className={styles.cameraOverlay}>
           <div className={`${styles.crosshair} ${styles.tl}`} />

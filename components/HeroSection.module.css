@@ -5,40 +5,53 @@
   align-items: center;
   padding: var(--spacing-xxl) var(--spacing-xl);
   overflow: hidden;
-  background-color: var(--color-bg);
+  background: radial-gradient(circle at 70% 50%, rgba(var(--color-ai-vision-rgb), 0.05) 0%, transparent 60%),
+              radial-gradient(circle at 20% 80%, rgba(var(--color-danger-rgb), 0.05) 0%, transparent 50%),
+              var(--color-bg);
+}
+
+@keyframes heroFadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .bgGrid {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  top: 0; left: 0; right: 0; bottom: 0;
   background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  background-size: 40px 40px;
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-position: center center;
   z-index: 0;
+  mask-image: radial-gradient(circle at center, black 30%, transparent 80%);
+  -webkit-mask-image: radial-gradient(circle at center, black 30%, transparent 80%);
 }
 
 .content {
   position: relative;
   z-index: 2;
-  max-width: 600px;
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .badge {
   display: inline-flex;
   align-items: center;
   gap: var(--spacing-sm);
-  background: rgba(0, 188, 212, 0.1);
+  background: rgba(var(--color-ai-vision-rgb), 0.1);
   color: var(--color-ai-vision);
-  padding: 0.25rem 0.75rem;
+  padding: 0.35rem 1rem;
   border-radius: 20px;
   font-size: 0.85rem;
+  font-family: var(--font-mono);
   font-weight: 600;
-  border: 1px solid rgba(0, 188, 212, 0.2);
-  margin-bottom: var(--spacing-md);
+  border: 1px solid rgba(var(--color-ai-vision-rgb), 0.3);
+  margin-bottom: var(--spacing-lg);
+  opacity: 0;
+  animation: heroFadeIn var(--transition-normal) forwards;
 }
 
 .liveDot {
@@ -46,171 +59,242 @@
   height: 8px;
   background-color: var(--color-danger);
   border-radius: 50%;
-  animation: pulse 1.5s infinite;
+  animation: pulse 2s infinite;
+  box-shadow: var(--glow-danger);
 }
 
 @keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(229, 57, 53, 0.7); }
-  70% { box-shadow: 0 0 0 6px rgba(229, 57, 53, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(229, 57, 53, 0); }
+  0% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.2); }
+  100% { opacity: 1; transform: scale(1); }
 }
 
 .title {
-  font-size: 3.5rem;
-  line-height: 1.1;
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  line-height: 1.05;
   margin-bottom: var(--spacing-md);
   color: var(--color-text);
+  font-weight: 800;
+  opacity: 0;
+  animation: heroFadeIn var(--transition-normal) forwards;
+  animation-delay: 0.2s;
 }
 
 .description {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: var(--color-text-muted);
   line-height: 1.6;
   margin-bottom: var(--spacing-lg);
+  max-width: 90%;
+  opacity: 0;
+  animation: heroFadeIn var(--transition-normal) forwards;
+  animation-delay: 0.4s;
 }
 
 .ctaGroup {
   display: flex;
   gap: var(--spacing-md);
+  opacity: 0;
+  animation: heroFadeIn var(--transition-normal) forwards;
+  animation-delay: 0.6s;
 }
 
 .primaryBtn {
-  background-color: var(--color-danger);
+  background: linear-gradient(135deg, var(--color-danger) 0%, #b71c1c 100%);
   color: white;
-  border: none;
-  padding: 1rem 2rem;
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 1.2rem 2.5rem;
   border-radius: 4px;
-  font-weight: 600;
-  font-size: 1rem;
+  font-weight: 700;
+  font-size: 1.1rem;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all var(--transition-fast);
+  box-shadow: 0 4px 15px rgba(229, 57, 53, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+.primaryBtn::after {
+  content: '';
+  position: absolute;
+  top: -50%; left: -50%; width: 200%; height: 200%;
+  background: linear-gradient(to bottom right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0) 100%);
+  transform: rotate(45deg) translateY(-100%);
+  transition: transform 0.6s;
 }
 .primaryBtn:hover {
-  background-color: #c62828;
+  transform: translateY(-2px);
+  box-shadow: var(--glow-danger);
+}
+.primaryBtn:hover::after {
+  transform: rotate(45deg) translateY(100%);
 }
 
 .secondaryBtn {
-  background-color: transparent;
+  background-color: rgba(255,255,255,0.03);
   color: var(--color-text);
   border: 1px solid var(--color-border);
-  padding: 1rem 2rem;
+  backdrop-filter: blur(10px);
+  padding: 1.2rem 2.5rem;
   border-radius: 4px;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.1rem;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all var(--transition-fast);
 }
 .secondaryBtn:hover {
+  background-color: rgba(255,255,255,0.08);
   border-color: var(--color-text);
 }
 
 /* AI Camera Mockup */
 .cameraMockup {
   position: absolute;
-  right: var(--spacing-xl);
+  right: 5%;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%) perspective(1000px) rotateY(-5deg);
   width: 45%;
-  height: 60vh;
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 8px;
-  background: #000;
+  height: 65vh;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 12px;
+  background: #05080a;
   overflow: hidden;
   z-index: 1;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.8), 
+              inset 0 0 0 1px rgba(255,255,255,0.05);
+  opacity: 0;
+  animation: heroFadeIn var(--transition-slow) forwards;
+  animation-delay: 0.8s;
+}
+
+.scanline {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 2px;
+  background: rgba(var(--color-ai-vision-rgb), 0.5);
+  box-shadow: 0 0 10px rgba(var(--color-ai-vision-rgb), 1);
+  animation: scanline 4s linear infinite;
+  z-index: 10;
+  pointer-events: none;
 }
 
 .cameraOverlay {
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
   pointer-events: none;
+  background: radial-gradient(circle at center, transparent 40%, rgba(0,0,0,0.6) 100%);
 }
 
 .crosshair {
   position: absolute;
-  width: 40px; height: 40px;
+  width: 60px; height: 60px;
+  opacity: 0.5;
 }
-.crosshair.tl { top: 20px; left: 20px; border-top: 2px solid var(--color-border); border-left: 2px solid var(--color-border); }
-.crosshair.tr { top: 20px; right: 20px; border-top: 2px solid var(--color-border); border-right: 2px solid var(--color-border); }
-.crosshair.bl { bottom: 20px; left: 20px; border-bottom: 2px solid var(--color-border); border-left: 2px solid var(--color-border); }
-.crosshair.br { bottom: 20px; right: 20px; border-bottom: 2px solid var(--color-border); border-right: 2px solid var(--color-border); }
+.crosshair.tl { top: 30px; left: 30px; border-top: 2px solid var(--color-border); border-left: 2px solid var(--color-border); }
+.crosshair.tr { top: 30px; right: 30px; border-top: 2px solid var(--color-border); border-right: 2px solid var(--color-border); }
+.crosshair.bl { bottom: 30px; left: 30px; border-bottom: 2px solid var(--color-border); border-left: 2px solid var(--color-border); }
+.crosshair.br { bottom: 30px; right: 30px; border-bottom: 2px solid var(--color-border); border-right: 2px solid var(--color-border); }
 
 .camStats {
   position: absolute;
-  bottom: 20px; left: 20px;
+  bottom: 30px; left: 30px;
   font-family: var(--font-mono);
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: var(--color-ai-vision);
-  background: rgba(0,0,0,0.5);
-  padding: 4px 8px;
+  background: rgba(0,0,0,0.7);
+  padding: 8px 12px;
+  border-left: 3px solid var(--color-ai-vision);
+  backdrop-filter: blur(4px);
+  text-shadow: 0 0 5px rgba(var(--color-ai-vision-rgb), 0.5);
 }
 
 /* Bounding Box Animation */
 .boundingBox {
   position: absolute;
   border: 2px solid var(--color-ai-vision);
-  background: rgba(0, 188, 212, 0.1);
-  transition: all 0.5s ease-in-out;
+  background: rgba(var(--color-ai-vision-rgb), 0.1);
+  transition: all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
   display: flex;
   flex-direction: column;
+  box-shadow: var(--glow-ai);
 }
 
 .bbLabel {
   background: var(--color-ai-vision);
   color: #000;
   font-family: var(--font-mono);
-  font-size: 0.7rem;
-  padding: 2px 6px;
+  font-size: 0.75rem;
+  padding: 4px 8px;
   font-weight: bold;
   align-self: flex-start;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 /* States */
 .safe {
   border-color: var(--color-ai-vision);
-  background: rgba(0, 188, 212, 0.1);
-  left: 20%; top: 40%; width: 100px; height: 180px;
+  background: rgba(var(--color-ai-vision-rgb), 0.05);
+  left: 25%; top: 35%; width: 120px; height: 220px;
+  box-shadow: var(--glow-ai);
 }
 .safe .bbLabel { background: var(--color-ai-vision); color: #000; }
 
 .warning {
   border-color: var(--color-warning);
   background: rgba(255, 193, 7, 0.1);
-  left: 45%; top: 35%; width: 120px; height: 210px;
+  left: 45%; top: 30%; width: 140px; height: 240px;
+  box-shadow: 0 0 20px rgba(255, 193, 7, 0.4);
 }
 .warning .bbLabel { background: var(--color-warning); color: #000; }
 
 .danger {
   border-color: var(--color-danger);
-  background: rgba(229, 57, 53, 0.15);
-  left: 65%; top: 30%; width: 140px; height: 250px;
-  box-shadow: 0 0 20px rgba(229, 57, 53, 0.5);
+  background: rgba(var(--color-danger-rgb), 0.15);
+  left: 60%; top: 25%; width: 160px; height: 280px;
+  box-shadow: var(--glow-danger);
 }
 .danger .bbLabel { background: var(--color-danger); color: #fff;}
-
 .dangerZone {
   position: absolute;
   right: 0;
   top: 0;
   height: 100%;
-  width: 40%;
+  width: 45%;
   background: repeating-linear-gradient(
-    45deg,
-    transparent,
-    transparent 10px,
-    rgba(229, 57, 53, 0.1) 10px,
-    rgba(229, 57, 53, 0.1) 20px
+    -45deg,
+    rgba(var(--color-danger-rgb), 0.05),
+    rgba(var(--color-danger-rgb), 0.05) 15px,
+    transparent 15px,
+    transparent 30px
   );
-  border-left: 2px dashed var(--color-danger);
+  border-left: 2px dashed rgba(var(--color-danger-rgb), 0.6);
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+
+.cameraMockup:has(.danger) .dangerZone {
+  opacity: 1;
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(var(--color-danger-rgb), 0.15),
+    rgba(var(--color-danger-rgb), 0.15) 15px,
+    transparent 15px,
+    transparent 30px
+  );
+  border-left: 3px solid var(--color-danger);
+  box-shadow: inset 20px 0 40px rgba(var(--color-danger-rgb), 0.2);
 }
 
 @media (max-width: 1024px) {
-  .hero { flex-direction: column; justify-content: center; text-align: center; }
+  .hero { flex-direction: column; justify-content: center; text-align: center; padding-top: 120px; }
+  .content { align-items: center; }
+  .title { font-size: 2.5rem; }
+  .description { max-width: 100%; }
   .ctaGroup { justify-content: center; }
   .cameraMockup {
     position: relative;
     width: 100%;
+    height: 300px;
     margin-top: var(--spacing-xl);
     transform: none;
     right: auto;

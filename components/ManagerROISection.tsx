@@ -12,22 +12,25 @@ export default function ManagerROISection() {
         </div>
 
         <div className={styles.cards}>
-          <div className={styles.card}>
+          <div className={`${styles.card} glass-panel`}>
             <div className={styles.iconWrapper}>📜</div>
             <h3>Adequação NR-12 e OSHA</h3>
-            <p>Atende aos mais rigorosos padrões de segurança internacional, minimizando passivos trabalhistas e garantindo certificações de qualidade.</p>
+            <p>Atende aos padrões de segurança internacionais rigorosos, minimizando passivos trabalhistas e garantindo certificações de qualidade com registros em vídeo imutáveis.</p>
+            <div className={styles.cardHighlight}></div>
           </div>
           
-          <div className={styles.card}>
+          <div className={`${styles.card} glass-panel ${styles.featuredCard}`}>
             <div className={styles.iconWrapper}>📉</div>
-            <h3>Redução de Acidentes</h3>
-            <p>Adoção de segurança preventiva corta a energia antes que o limite físico seja cruzado. Proteção ativa contra falha humana.</p>
+            <h3>Risco Zero de Amputações</h3>
+            <p>Adoção de segurança preditiva com baixa latência corta a energia antes que o limite físico seja cruzado. Proteção ativa implacável contra falha humana e fadiga.</p>
+            <div className={styles.cardHighlight}></div>
           </div>
           
-          <div className={styles.card}>
+          <div className={`${styles.card} glass-panel`}>
             <div className={styles.iconWrapper}>⚡</div>
-            <h3>Sem Paradas Desnecessárias</h3>
-            <p>A precisão da inteligência artificial evita "falsos positivos" frequentes em sensores infravermelhos antigos, aumentando o OEE da fábrica.</p>
+            <h3>OEE e Produtividade Maximizado</h3>
+            <p>A precisão da rede neural convolucional evita "falsos positivos" frequentes encontrados em Lidar e sensores infravermelhos antigos, aumentando o OEE da fábrica.</p>
+            <div className={styles.cardHighlight}></div>
           </div>
         </div>
       </div>

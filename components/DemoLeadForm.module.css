@@ -1,6 +1,6 @@
 .section {
   padding: var(--spacing-xxl) var(--spacing-xl);
-  background-color: var(--color-bg);
+  background: radial-gradient(circle at 50% 100%, rgba(var(--color-danger-rgb), 0.05) 0%, transparent 60%), var(--color-bg);
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -14,14 +14,16 @@
 }
 
 .title {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 3vw, 2.5rem);
   color: var(--color-text);
   margin-bottom: var(--spacing-md);
   line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -1px;
 }
 
 .description {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   color: var(--color-text-muted);
   line-height: 1.6;
 }
@@ -29,11 +31,21 @@
 .form {
   background: rgba(255, 255, 255, 0.02);
   padding: var(--spacing-xl);
-  border-radius: 8px;
+  border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.05);
   display: flex;
   flex-direction: column;
   gap: var(--spacing-md);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.form::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, transparent, var(--color-danger), transparent);
 }
 
 .inputGroup {
@@ -45,42 +57,54 @@
 .inputGroup label {
   font-size: 0.9rem;
   color: var(--color-text-muted);
-  font-weight: 500;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  letter-spacing: 0.5px;
 }
 
 .inputGroup input {
-  padding: 0.8rem 1rem;
-  border-radius: 4px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(0, 0, 0, 0.2);
+  padding: 1rem 1.2rem;
+  border-radius: 4px 4px 0 0;
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.03);
   color: var(--color-text);
   font-family: var(--font-inter), sans-serif;
-  transition: border-color 0.2s;
+  font-size: 1rem;
+  transition: all var(--transition-normal);
 }
 
 .inputGroup input:focus {
   outline: none;
-  border-color: var(--color-ai-vision);
-  background: rgba(0, 0, 0, 0.4);
+  border-bottom-color: var(--color-ai-vision);
+  background: rgba(var(--color-ai-vision-rgb), 0.05);
+  box-shadow: inset 0 -20px 20px -20px rgba(var(--color-ai-vision-rgb), 0.3);
+}
+
+.inputGroup input::placeholder {
+  color: rgba(255,255,255,0.2);
 }
 
 .submitBtn {
-  margin-top: var(--spacing-sm);
-  background-color: var(--color-danger);
+  margin-top: var(--spacing-md);
+  background: linear-gradient(135deg, var(--color-danger) 0%, #b71c1c 100%);
   color: white;
-  border: none;
-  padding: 1rem;
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 1.2rem;
   border-radius: 4px;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.1rem;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: all var(--transition-fast);
+  box-shadow: 0 4px 15px rgba(229, 57, 53, 0.3);
 }
 
 .submitBtn:hover {
-  background-color: #c62828;
+  transform: translateY(-2px);
+  box-shadow: var(--glow-danger);
 }
 
 @media (max-width: 768px) {
   .container { grid-template-columns: 1fr; }
+  .form { padding: var(--spacing-lg); }
 }

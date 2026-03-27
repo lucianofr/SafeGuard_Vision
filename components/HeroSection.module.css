@@ -156,7 +156,7 @@
   height: 65vh;
   border: 1px solid rgba(255,255,255,0.15);
   border-radius: 12px;
-  background: #05080a url('/hero-worker.png') center/cover no-repeat;
+  background: #05080a;
   overflow: hidden;
   z-index: 1;
   box-shadow: 0 30px 60px rgba(0,0,0,0.8), 

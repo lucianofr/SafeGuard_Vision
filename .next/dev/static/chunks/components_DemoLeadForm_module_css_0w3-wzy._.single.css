@@ -1,0 +1,165 @@
+/* [project]/components/DemoLeadForm.module.css [app-client] (css) */
+.DemoLeadForm-module__KhETra__section {
+  padding: var(--spacing-xxl) var(--spacing-xl);
+  background: radial-gradient(circle at 50% 100%, rgba(var(--color-danger-rgb), .05) 0%, transparent 60%), var(--color-bg);
+  border-top: 1px solid #ffffff0d;
+}
+
+.DemoLeadForm-module__KhETra__container {
+  gap: var(--spacing-xl);
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+}
+
+.DemoLeadForm-module__KhETra__title {
+  color: var(--color-text);
+  margin-bottom: var(--spacing-md);
+  letter-spacing: -1px;
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.DemoLeadForm-module__KhETra__description {
+  color: var(--color-text-muted);
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+
+.DemoLeadForm-module__KhETra__form {
+  padding: var(--spacing-xl);
+  gap: var(--spacing-md);
+  background: #ffffff05;
+  border: 1px solid #ffffff0d;
+  border-radius: 12px;
+  flex-direction: column;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 40px #00000080;
+}
+
+.DemoLeadForm-module__KhETra__form:before {
+  content: "";
+  background: linear-gradient(90deg, transparent, var(--color-danger), transparent);
+  height: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.DemoLeadForm-module__KhETra__inputGroup {
+  gap: var(--spacing-xs);
+  flex-direction: column;
+  display: flex;
+}
+
+.DemoLeadForm-module__KhETra__inputGroup label {
+  color: var(--color-text-muted);
+  font-size: .9rem;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  letter-spacing: .5px;
+}
+
+.DemoLeadForm-module__KhETra__inputGroup input, .DemoLeadForm-module__KhETra__textarea {
+  color: var(--color-text);
+  font-family: var(--font-inter), sans-serif;
+  transition: all var(--transition-normal);
+  resize: vertical;
+  background: #ffffff08;
+  border: none;
+  border-bottom: 2px solid #fff3;
+  border-radius: 4px 4px 0 0;
+  padding: 1rem 1.2rem;
+  font-size: 1rem;
+}
+
+.DemoLeadForm-module__KhETra__inputGroup input:focus, .DemoLeadForm-module__KhETra__textarea:focus {
+  border-bottom-color: var(--color-ai-vision);
+  background: rgba(var(--color-ai-vision-rgb), .05);
+  box-shadow: inset 0 -20px 20px -20px rgba(var(--color-ai-vision-rgb), .3);
+  outline: none;
+}
+
+.DemoLeadForm-module__KhETra__inputGroup input::placeholder, .DemoLeadForm-module__KhETra__textarea::placeholder {
+  color: #fff3;
+}
+
+.DemoLeadForm-module__KhETra__submitBtn {
+  margin-top: var(--spacing-md);
+  background: linear-gradient(135deg, var(--color-danger) 0%, #b71c1c 100%);
+  color: #fff;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border: 1px solid #ffffff1a;
+  border-radius: 4px;
+  padding: 1.2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  box-shadow: 0 4px 15px #e539354d;
+}
+
+.DemoLeadForm-module__KhETra__submitBtn:hover {
+  box-shadow: var(--glow-danger);
+  transform: translateY(-2px);
+}
+
+.DemoLeadForm-module__KhETra__submitBtn:disabled {
+  color: #ffffff80;
+  box-shadow: none;
+  cursor: not-allowed;
+  background: #ffffff1a;
+  border-color: #0000;
+  transform: none;
+}
+
+.DemoLeadForm-module__KhETra__successMessage {
+  border: 1px solid var(--color-success);
+  padding: var(--spacing-xl);
+  text-align: center;
+  gap: var(--spacing-md);
+  background: #43a0471a;
+  border-radius: 12px;
+  flex-direction: column;
+  animation: .5s forwards DemoLeadForm-module__KhETra__heroFadeIn;
+  display: flex;
+  box-shadow: 0 0 20px #43a04733;
+}
+
+.DemoLeadForm-module__KhETra__successMessage h3 {
+  color: var(--color-success);
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.DemoLeadForm-module__KhETra__successMessage p {
+  color: var(--color-text-muted);
+  font-size: 1.1rem;
+}
+
+.DemoLeadForm-module__KhETra__errorMessage {
+  color: var(--color-danger);
+  text-align: center;
+  background: #e539351a;
+  border: 1px solid #e539354d;
+  border-radius: 4px;
+  padding: .8rem;
+  font-size: .9rem;
+}
+
+@media (max-width: 768px) {
+  .DemoLeadForm-module__KhETra__container {
+    grid-template-columns: 1fr;
+  }
+
+  .DemoLeadForm-module__KhETra__form {
+    padding: var(--spacing-lg);
+  }
+}
+
+/*# sourceMappingURL=components_DemoLeadForm_module_css_0w3-wzy._.single.css.map*/

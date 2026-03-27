@@ -1,0 +1,13 @@
+{"timestamp":"00:00:00.942","source":"Server","level":"LOG","message":""}
+{"timestamp":"00:05:38.017","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"00:06:33.331","source":"Server","level":"LOG","message":"✓ Compiled in 9ms"}
+{"timestamp":"00:07:17.434","source":"Browser","level":"INFO","message":"%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold"}
+{"timestamp":"00:11:12.580","source":"Server","level":"LOG","message":"✓ Compiled in 7ms"}
+{"timestamp":"00:22:08.430","source":"Server","level":"LOG","message":"  Reload env: .env"}
+{"timestamp":"00:22:08.447","source":"Server","level":"LOG","message":"  Reload env: .env"}
+{"timestamp":"00:22:53.871","source":"Server","level":"LOG","message":"  Reload env: .env.local"}
+{"timestamp":"00:23:26.253","source":"Server","level":"LOG","message":"✓ Compiled in 171ms"}
+{"timestamp":"00:23:36.534","source":"Server","level":"LOG","message":"  Reload env: .env.local"}
+{"timestamp":"00:30:18.968","source":"Server","level":"LOG","message":"  Reload env: .env.local"}
+{"timestamp":"00:46:42.567","source":"Server","level":"LOG","message":"  Reload env: .env"}
+{"timestamp":"00:46:48.967","source":"Server","level":"LOG","message":"  Reload env: .env.local"}

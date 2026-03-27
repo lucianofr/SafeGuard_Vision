@@ -1,0 +1,84 @@
+/* [project]/components/Navbar.module.css [app-client] (css) */
+.Navbar-module__nuAbfa__navbar {
+  width: 100%;
+  padding: var(--spacing-md) var(--spacing-xl);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 1000;
+  background-color: #1a2226d9;
+  border-bottom: 1px solid #ffffff0d;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0 4px 30px #00000080;
+}
+
+.Navbar-module__nuAbfa__logo {
+  align-items: center;
+  gap: var(--spacing-sm);
+  color: var(--color-text);
+  letter-spacing: -.5px;
+  font-size: 1.4rem;
+  font-weight: 800;
+  display: flex;
+}
+
+.Navbar-module__nuAbfa__logoIcon {
+  color: var(--color-ai-vision);
+  filter: drop-shadow(0 0 8px rgba(var(--color-ai-vision-rgb), .6));
+}
+
+.Navbar-module__nuAbfa__navLinks {
+  gap: var(--spacing-lg);
+  align-items: center;
+  display: flex;
+}
+
+.Navbar-module__nuAbfa__navLink {
+  color: var(--color-text-muted);
+  font-size: .95rem;
+  font-family: var(--font-mono);
+  transition: color var(--transition-fast), text-shadow var(--transition-fast);
+  font-weight: 600;
+}
+
+.Navbar-module__nuAbfa__navLink:hover {
+  color: var(--color-text);
+  text-shadow: 0 0 10px #ffffff4d;
+}
+
+.Navbar-module__nuAbfa__ctaButton {
+  background: linear-gradient(135deg, var(--color-danger) 0%, #b71c1c 100%);
+  color: #fff;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  border: 1px solid #ffffff1a;
+  border-radius: 4px;
+  padding: .6rem 1.5rem;
+  font-size: .95rem;
+  font-weight: 700;
+  box-shadow: 0 4px 10px #e539354d;
+}
+
+.Navbar-module__nuAbfa__ctaButton:hover {
+  box-shadow: var(--glow-danger);
+  transform: translateY(-2px);
+}
+
+.Navbar-module__nuAbfa__ctaButton:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .Navbar-module__nuAbfa__navLinks {
+    display: none;
+  }
+
+  .Navbar-module__nuAbfa__navbar {
+    padding: var(--spacing-md);
+  }
+}
+
+/*# sourceMappingURL=components_Navbar_module_css_0w3-wzy._.single.css.map*/

@@ -3,10 +3,10 @@ import nodemailer from 'nodemailer';
 
 export async function POST(req: Request) {
   try {
-    const { name, email, company } = await req.json();
+    const { name, email, company, message } = await req.json();
 
     if (!name || !email || !company) {
-      return NextResponse.json({ message: 'Todos os campos são obrigatórios' }, { status: 400 });
+      return NextResponse.json({ message: 'Nome, Email e Empresa são obrigatórios' }, { status: 400 });
     }
 
     const transporter = nodemailer.createTransport({
@@ -30,7 +30,8 @@ export async function POST(req: Request) {
           <div style="background-color: #f9f9f9; padding: 15px; border-left: 4px solid #00BCD4; border-radius: 4px;">
             <p style="margin: 0 0 10px 0;"><strong>👤 Nome:</strong> ${name}</p>
             <p style="margin: 0 0 10px 0;"><strong>📧 Email:</strong> ${email}</p>
-            <p style="margin: 0 0 0 0;"><strong>🏢 Empresa:</strong> ${company}</p>
+            <p style="margin: 0 0 10px 0;"><strong>🏢 Empresa:</strong> ${company}</p>
+            <p style="margin: 0 0 0 0;"><strong>💬 Mensagem:</strong> ${message || '<i>Nenhuma mensagem enviada.</i>'}</p>
           </div>
           <br/>
           <p style="font-size: 0.8em; color: #888;">Mensagem gerada automaticamente pelo sistema da Landing Page.</p>

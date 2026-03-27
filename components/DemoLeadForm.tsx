@@ -4,7 +4,7 @@ import { useState } from 'react';
 import styles from './DemoLeadForm.module.css';
 
 export default function DemoLeadForm() {
-  const [formData, setFormData] = useState({ name: '', email: '', company: '' });
+  const [formData, setFormData] = useState({ name: '', email: '', company: '', message: '' });
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -20,7 +20,7 @@ export default function DemoLeadForm() {
 
       if (response.ok) {
         setStatus('success');
-        setFormData({ name: '', email: '', company: '' });
+        setFormData({ name: '', email: '', company: '', message: '' });
       } else {
         setStatus('error');
       }
@@ -89,8 +89,21 @@ export default function DemoLeadForm() {
               />
             </div>
 
+            <div className={styles.inputGroup}>
+              <label htmlFor="message">Mensagem (Opcional)</label>
+              <textarea 
+                id="message" 
+                placeholder="Como podemos te ajudar hoje?" 
+                rows={4}
+                value={formData.message}
+                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                disabled={status === 'loading'}
+                className={styles.textarea}
+              />
+            </div>
+
             {status === 'error' && (
-              <p className={styles.errorMessage}>Ocorreu um erro ao enviar. Tente novamente mais tarde.</p>
+              <p className={styles.errorMessage}>Ocorreu um erro ao enviar. Verifique seu console (e reinicie o npm run dev se recém criou o .env).</p>
             )}
 
             <button type="submit" className={styles.submitBtn} disabled={status === 'loading'}>

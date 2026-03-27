@@ -1,0 +1,75 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-md) var(--spacing-xl);
+  background-color: rgba(38, 50, 56, 0.85); /* Chumbo Industrial with opacity */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--color-text);
+  letter-spacing: 0.5px;
+}
+
+.logoIcon {
+  color: var(--color-ai-vision);
+}
+
+.navLinks {
+  display: flex;
+  gap: var(--spacing-lg);
+  align-items: center;
+}
+
+.navLink {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.navLink:hover {
+  color: var(--color-text);
+}
+
+.ctaButton {
+  background-color: var(--color-danger);
+  color: #fff;
+  padding: 0.5rem 1.25rem;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.ctaButton:hover {
+  background-color: #d32f2f;
+  transform: translateY(-1px);
+}
+
+.ctaButton:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .navLinks {
+    display: none;
+  }
+  .navbar {
+    padding: var(--spacing-md);
+  }
+}

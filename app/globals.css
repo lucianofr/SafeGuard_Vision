@@ -1,0 +1,44 @@
+:root {
+  /* Colors - Primary (Action & Alert) */
+  --color-danger: #E53935;
+  --color-warning: #FFC107;
+  --color-success: #43A047;
+
+  /* Colors - Secondary (Tech & Structure) */
+  --color-ai-vision: #00BCD4;
+  --color-bg: #263238;
+  --color-border: #90A4AE;
+  --color-text: #FFFFFF;
+  --color-text-muted: rgba(255, 255, 255, 0.7);
+
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 4rem;
+  --spacing-xxl: 8rem;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-inter), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

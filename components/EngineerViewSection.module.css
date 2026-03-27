@@ -1,0 +1,123 @@
+.section {
+  padding: var(--spacing-xxl) var(--spacing-xl);
+  background-color: #1a2327;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.title {
+  font-size: 2.5rem;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-sm);
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-xl);
+}
+
+.diagramCard {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: var(--spacing-xl);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow-x: auto;
+}
+
+.node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  min-width: 150px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+.icon { font-size: 2rem; }
+
+.aiNode {
+  border-color: var(--color-ai-vision);
+  background: rgba(0, 188, 212, 0.1);
+}
+
+.plcNode { border-color: var(--color-warning); }
+
+.arrow {
+  color: var(--color-border);
+  font-size: 2rem;
+  font-family: var(--font-mono);
+}
+
+.pulseNode {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 12px;
+  height: 12px;
+  background-color: var(--color-ai-vision);
+  border-radius: 50%;
+  animation: pulseAi 2s infinite;
+}
+
+@keyframes pulseAi {
+  0% { box-shadow: 0 0 0 0 rgba(0, 188, 212, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(0, 188, 212, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(0, 188, 212, 0); }
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.metricCard {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: var(--spacing-lg);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.metricValue {
+  font-family: var(--font-mono);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-ai-vision);
+  margin-bottom: var(--spacing-xs);
+}
+
+.metricLabel {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .diagramCard { flex-direction: column; gap: var(--spacing-md); }
+  .arrow { transform: rotate(90deg); }
+}

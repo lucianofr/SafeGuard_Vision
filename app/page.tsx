@@ -1,7 +1,21 @@
+import Navbar from '../components/Navbar';
+import HeroSection from '../components/HeroSection';
+import EngineerViewSection from '../components/EngineerViewSection';
+import ManagerROISection from '../components/ManagerROISection';
+import HSEImpactSection from '../components/HSEImpactSection';
+import DemoLeadForm from '../components/DemoLeadForm';
+import Footer from '../components/Footer';
+
 export default function Home() {
   return (
     <main>
-      <div>Hello world!</div>
+      <Navbar />
+      <HeroSection />
+      <EngineerViewSection />
+      <ManagerROISection />
+      <HSEImpactSection />
+      <DemoLeadForm />
+      <Footer />
     </main>
   );
 }

@@ -1,0 +1,290 @@
+/* [project]/components/PPEDetectionSection.module.css [app-client] (css) */
+.PPEDetectionSection-module__1GXFza__section {
+  background-color: var(--color-bg-darker, #0a0a0a);
+  border-top: 1px solid #ffffff0d;
+  padding: 8rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.PPEDetectionSection-module__1GXFza__container {
+  max-width: var(--container-width, 1200px);
+  z-index: 2;
+  margin: 0 auto;
+  position: relative;
+}
+
+.PPEDetectionSection-module__1GXFza__header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.PPEDetectionSection-module__1GXFza__title {
+  background: linear-gradient(#fff 0%, #a1a1aa 100%);
+  color: #0000;
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-bottom: 1.5rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+}
+
+.PPEDetectionSection-module__1GXFza__highlight {
+  color: var(--color-ai-vision, #00bcd4);
+  text-shadow: 0 0 20px #00bcd44d;
+  -webkit-text-fill-color: initial;
+  background: none;
+}
+
+.PPEDetectionSection-module__1GXFza__subtitle {
+  color: #a1a1aa;
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+.PPEDetectionSection-module__1GXFza__grid {
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 3rem;
+  display: grid;
+}
+
+@media (max-width: 900px) {
+  .PPEDetectionSection-module__1GXFza__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.PPEDetectionSection-module__1GXFza__contentLeft {
+  flex-direction: column;
+  gap: 2rem;
+  display: flex;
+}
+
+.PPEDetectionSection-module__1GXFza__featureCard {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background: #14141699;
+  border: 1px solid #ffffff1a;
+  border-radius: 12px;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  transition: all .3s;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.PPEDetectionSection-module__1GXFza__featureCard:hover {
+  border-color: #00bcd44d;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px #00000080, inset 0 0 20px #00bcd40d;
+}
+
+.PPEDetectionSection-module__1GXFza__featureCard:before {
+  content: "";
+  background: var(--color-ai-vision, #00bcd4);
+  opacity: 0;
+  width: 4px;
+  height: 100%;
+  transition: opacity .3s;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.PPEDetectionSection-module__1GXFza__featureCard:hover:before {
+  opacity: 1;
+}
+
+.PPEDetectionSection-module__1GXFza__iconWrapper {
+  background: #00bcd41a;
+  border: 1px solid #00bcd433;
+  border-radius: 12px;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  font-size: 2rem;
+  display: flex;
+}
+
+.PPEDetectionSection-module__1GXFza__featureInfo h3 {
+  color: #fff;
+  margin-bottom: .5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.PPEDetectionSection-module__1GXFza__featureInfo p {
+  color: #a1a1aa;
+  font-size: .95rem;
+  line-height: 1.5;
+}
+
+.PPEDetectionSection-module__1GXFza__visualSide {
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  min-height: 400px;
+  display: flex;
+  position: relative;
+}
+
+.PPEDetectionSection-module__1GXFza__radarContainer {
+  aspect-ratio: 1;
+  background: radial-gradient(circle, #00bcd40d 0%, #0a0a0a00 70%);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 450px;
+  display: flex;
+  position: relative;
+}
+
+.PPEDetectionSection-module__1GXFza__radarSweep {
+  transform-origin: 0 0;
+  background: conic-gradient(#00bcd400 0%, #00bcd466 100%);
+  border-radius: 100% 0 0;
+  width: 50%;
+  height: 50%;
+  animation: 4s linear infinite PPEDetectionSection-module__1GXFza__radarSpin;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+@keyframes PPEDetectionSection-module__1GXFza__radarSpin {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.PPEDetectionSection-module__1GXFza__radarRings {
+  border: 1px dashed #00bcd433;
+  border-radius: 50%;
+  position: absolute;
+  inset: 0;
+}
+
+.PPEDetectionSection-module__1GXFza__radarRings:before, .PPEDetectionSection-module__1GXFza__radarRings:after {
+  content: "";
+  border: 1px dashed #00bcd426;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.PPEDetectionSection-module__1GXFza__radarRings:before {
+  width: 66%;
+  height: 66%;
+}
+
+.PPEDetectionSection-module__1GXFza__radarRings:after {
+  width: 33%;
+  height: 33%;
+}
+
+.PPEDetectionSection-module__1GXFza__modelBadge {
+  border: 1px solid var(--color-ai-vision, #00bcd4);
+  text-align: center;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  z-index: 10;
+  background: #0a0a0acc;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 20px #00bcd433;
+}
+
+.PPEDetectionSection-module__1GXFza__modelBadge span {
+  display: block;
+}
+
+.PPEDetectionSection-module__1GXFza__modelName {
+  color: #fff;
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.PPEDetectionSection-module__1GXFza__modelDesc {
+  color: var(--color-ai-vision, #00bcd4);
+  margin-top: .2rem;
+  font-family: monospace;
+  font-size: .8rem;
+}
+
+.PPEDetectionSection-module__1GXFza__floatingTag {
+  color: #e4e4e7;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  background: #141416e6;
+  border: 1px solid #ffffff1a;
+  border-radius: 20px;
+  align-items: center;
+  gap: .5rem;
+  padding: .5rem 1rem;
+  font-size: .85rem;
+  animation: 6s ease-in-out infinite PPEDetectionSection-module__1GXFza__float;
+  display: flex;
+  position: absolute;
+  box-shadow: 0 4px 12px #0000004d;
+}
+
+.PPEDetectionSection-module__1GXFza__tag1 {
+  animation-delay: 0s;
+  top: 15%;
+  left: 10%;
+}
+
+.PPEDetectionSection-module__1GXFza__tag2 {
+  animation-delay: 2s;
+  top: 25%;
+  right: 5%;
+}
+
+.PPEDetectionSection-module__1GXFza__tag3 {
+  animation-delay: 4s;
+  bottom: 20%;
+  left: 15%;
+}
+
+.PPEDetectionSection-module__1GXFza__statusDot {
+  background: #22c55e;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  box-shadow: 0 0 10px #22c55e;
+}
+
+@keyframes PPEDetectionSection-module__1GXFza__float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/*# sourceMappingURL=components_PPEDetectionSection_module_css_0w3-wzy._.single.css.map*/

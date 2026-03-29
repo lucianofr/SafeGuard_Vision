@@ -91,7 +91,7 @@ export default function HeroSection() {
         </h1>
         
         <p className={styles.description}>
-          O SafeGuard Vision detecta intrusões em áreas de risco em tempo real. Integrado diretamente ao seu PLC, paralisa máquinas perigosas em milissegundos, antes que o acidente ocorra.
+          O SafeGuard Vision detecta intrusões em áreas de risco e ausência de EPIs em tempo real. Integrado diretamente ao seu PLC, paralisa máquinas perigosas em milissegundos, antes que o acidente ocorra.
         </p>
         
         <div className={styles.ctaGroup}>

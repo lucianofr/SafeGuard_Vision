@@ -50,11 +50,11 @@ var _s = __turbopack_context__.k.signature();
 ;
 const WorkerSilhouette = ()=>{
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(12);
-    if ($[0] !== "1d1d9637e33ac70d0e0b973cc47caa356158f0ad103465e2cd82b38a23ad6353") {
+    if ($[0] !== "73929c90746564b809a437661b552c51dfa84caf6fcbfce06fdefb099c604515") {
         for(let $i = 0; $i < 12; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "1d1d9637e33ac70d0e0b973cc47caa356158f0ad103465e2cd82b38a23ad6353";
+        $[0] = "73929c90746564b809a437661b552c51dfa84caf6fcbfce06fdefb099c604515";
     }
     let t0;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
@@ -259,11 +259,11 @@ _c = WorkerSilhouette;
 function HeroSection() {
     _s();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(28);
-    if ($[0] !== "1d1d9637e33ac70d0e0b973cc47caa356158f0ad103465e2cd82b38a23ad6353") {
+    if ($[0] !== "73929c90746564b809a437661b552c51dfa84caf6fcbfce06fdefb099c604515") {
         for(let $i = 0; $i < 28; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "1d1d9637e33ac70d0e0b973cc47caa356158f0ad103465e2cd82b38a23ad6353";
+        $[0] = "73929c90746564b809a437661b552c51dfa84caf6fcbfce06fdefb099c604515";
     }
     const [aiState, setAiState] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("safe");
     let t0;
@@ -363,7 +363,7 @@ function HeroSection() {
         }, this);
         t5 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
             className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$HeroSection$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].description,
-            children: "O SafeGuard Vision detecta intrusões em áreas de risco em tempo real. Integrado diretamente ao seu PLC, paralisa máquinas perigosas em milissegundos, antes que o acidente ocorra."
+            children: "O SafeGuard Vision detecta intrusões em áreas de risco e ausência de EPIs em tempo real. Integrado diretamente ao seu PLC, paralisa máquinas perigosas em milissegundos, antes que o acidente ocorra."
         }, void 0, false, {
             fileName: "[project]/components/HeroSection.tsx",
             lineNumber: 143,

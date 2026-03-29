@@ -1,5 +1,6 @@
 import Navbar from '../components/Navbar';
 import HeroSection from '../components/HeroSection';
+import PPEDetectionSection from '../components/PPEDetectionSection';
 import EngineerViewSection from '../components/EngineerViewSection';
 import ManagerROISection from '../components/ManagerROISection';
 import HSEImpactSection from '../components/HSEImpactSection';
@@ -11,6 +12,7 @@ export default function Home() {
     <main>
       <Navbar />
       <HeroSection />
+      <PPEDetectionSection />
       <EngineerViewSection />
       <ManagerROISection />
       <HSEImpactSection />

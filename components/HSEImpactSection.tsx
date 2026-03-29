@@ -28,6 +28,9 @@ export default function HSEImpactSection() {
             <li>
               <strong>Proativo:</strong> Avalia a intenção da trajetória, não apenas o limite estático.
             </li>
+            <li>
+              <strong>EPIs & Conformidade:</strong> Detecta instantaneamente a ausência de equipamentos de proteção utilizando YOLO26, a biblioteca mais moderna de detecção de objetos.
+            </li>
           </ul>
         </div>
 

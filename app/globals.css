@@ -1,17 +1,17 @@
 :root {
   /* Colors - Primary (Action & Alert) */
-  --color-danger: #E53935;
-  --color-danger-rgb: 229, 57, 53;
+  --color-danger: #F97316; /* Laranja Cyberpunk Accent para Danger/CTA */
+  --color-danger-rgb: 249, 115, 22;
   --color-warning: #FFC107;
   --color-success: #43A047;
 
   /* Colors - Secondary (Tech & Structure) */
-  --color-ai-vision: #00BCD4;
-  --color-ai-vision-rgb: 0, 188, 212;
-  --color-bg: #1a2226; /* Darker Chumbo for more contrast */
-  --color-border: #4f636e; /* Cinza Metálico slightly darker */
-  --color-text: #FFFFFF;
-  --color-text-muted: rgba(255, 255, 255, 0.65);
+  --color-ai-vision: #2563EB; /* Cyberpunk Trust Blue */
+  --color-ai-vision-rgb: 37, 99, 235;
+  --color-bg: #0f172a; /* Slate 900 para dark mode cyberpunk */
+  --color-border: #334155; /* Slate 700 */
+  --color-text: #F8FAFC; /* Slate 50 para alto contraste no escuro */
+  --color-text-muted: rgba(248, 250, 252, 0.65);
   
   /* Gradients & Glows */
   --glow-danger: 0 0 15px rgba(var(--color-danger-rgb), 0.5), 0 0 30px rgba(var(--color-danger-rgb), 0.3);
@@ -45,7 +45,7 @@ body {
   padding: 0;
   background-color: var(--color-bg);
   color: var(--color-text);
-  font-family: var(--font-inter), sans-serif;
+  font-family: var(--font-plus-jakarta), sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   

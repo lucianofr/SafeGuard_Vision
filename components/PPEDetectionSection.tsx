@@ -1,3 +1,4 @@
+import { HardHat, Shirt, Glasses } from 'lucide-react';
 import styles from './PPEDetectionSection.module.css';
 
 export default function PPEDetectionSection() {
@@ -17,7 +18,7 @@ export default function PPEDetectionSection() {
         <div className={styles.grid}>
           <div className={styles.contentLeft}>
             <div className={styles.featureCard}>
-              <div className={styles.iconWrapper}>👷</div>
+              <div className={styles.iconWrapper}><HardHat size={28} color="var(--color-ai-vision)" /></div>
               <div className={styles.featureInfo}>
                 <h3>Capacetes de Segurança</h3>
                 <p>Identifica instantaneamente se o colaborador está utilizando o capacete de forma correta na zona operacional, alertando sobre qualquer violação.</p>
@@ -25,7 +26,7 @@ export default function PPEDetectionSection() {
             </div>
 
             <div className={styles.featureCard}>
-              <div className={styles.iconWrapper}>🦺</div>
+              <div className={styles.iconWrapper}><Shirt size={28} color="var(--color-ai-vision)" /></div>
               <div className={styles.featureInfo}>
                 <h3>Coletes Refletivos</h3>
                 <p>Verificação contínua de coletes e uniformes de alta visibilidade em áreas de movimentação de carga e empilhadeiras.</p>
@@ -33,7 +34,7 @@ export default function PPEDetectionSection() {
             </div>
 
             <div className={styles.featureCard}>
-              <div className={styles.iconWrapper}>🥽</div>
+              <div className={styles.iconWrapper}><Glasses size={28} color="var(--color-ai-vision)" /></div>
               <div className={styles.featureInfo}>
                 <h3>Óculos de Proteção</h3>
                 <p>Em áreas de usinagem e solda, a IA mapeia a face do operador para garantir o uso de proteção ocular antes da máquina ser habilitada.</p>

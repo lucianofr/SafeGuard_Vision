@@ -1,3 +1,4 @@
+import { FileCheck, TrendingDown, Zap } from 'lucide-react';
 import styles from './ManagerROISection.module.css';
 
 export default function ManagerROISection() {
@@ -13,21 +14,21 @@ export default function ManagerROISection() {
 
         <div className={styles.cards}>
           <div className={`${styles.card} glass-panel`}>
-            <div className={styles.iconWrapper}>📜</div>
+            <div className={styles.iconWrapper}><FileCheck size={32} color="var(--color-ai-vision)" /></div>
             <h3>Adequação NR-12 e OSHA</h3>
             <p>Atende aos padrões de segurança internacionais rigorosos, minimizando passivos trabalhistas e garantindo certificações de qualidade com registros em vídeo imutáveis.</p>
             <div className={styles.cardHighlight}></div>
           </div>
           
           <div className={`${styles.card} glass-panel ${styles.featuredCard}`}>
-            <div className={styles.iconWrapper}>📉</div>
+            <div className={styles.iconWrapper}><TrendingDown size={32} color="var(--color-danger)" /></div>
             <h3>Risco Zero de Amputações</h3>
             <p>Adoção de segurança preditiva com baixa latência corta a energia antes que o limite físico seja cruzado. Proteção ativa implacável contra falha humana e fadiga.</p>
             <div className={styles.cardHighlight}></div>
           </div>
           
           <div className={`${styles.card} glass-panel`}>
-            <div className={styles.iconWrapper}>⚡</div>
+            <div className={styles.iconWrapper}><Zap size={32} color="var(--color-warning)" /></div>
             <h3>OEE e Produtividade Maximizado</h3>
             <p>A precisão da rede neural convolucional evita "falsos positivos" frequentes encontrados em Lidar e sensores infravermelhos antigos, aumentando o OEE da fábrica.</p>
             <div className={styles.cardHighlight}></div>

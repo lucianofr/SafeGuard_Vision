@@ -1,15 +1,15 @@
 /* [project]/app/globals.css [app-client] (css) */
 :root {
-  --color-danger: #e53935;
-  --color-danger-rgb: 229, 57, 53;
+  --color-danger: #f97316;
+  --color-danger-rgb: 249, 115, 22;
   --color-warning: #ffc107;
   --color-success: #43a047;
-  --color-ai-vision: #00bcd4;
-  --color-ai-vision-rgb: 0, 188, 212;
-  --color-bg: #1a2226;
-  --color-border: #4f636e;
-  --color-text: #fff;
-  --color-text-muted: #ffffffa6;
+  --color-ai-vision: #2563eb;
+  --color-ai-vision-rgb: 37, 99, 235;
+  --color-bg: #0f172a;
+  --color-border: #334155;
+  --color-text: #f8fafc;
+  --color-text-muted: #f8fafca6;
   --glow-danger: 0 0 15px rgba(var(--color-danger-rgb), .5), 0 0 30px rgba(var(--color-danger-rgb), .3);
   --glow-ai: 0 0 15px rgba(var(--color-ai-vision-rgb), .5), 0 0 30px rgba(var(--color-ai-vision-rgb), .3);
   --gradient-industrial: linear-gradient(135deg, #ffffff08 0%, #fff0 100%);
@@ -35,7 +35,7 @@ html {
 body {
   background-color: var(--color-bg);
   color: var(--color-text);
-  font-family: var(--font-inter), sans-serif;
+  font-family: var(--font-plus-jakarta), sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
